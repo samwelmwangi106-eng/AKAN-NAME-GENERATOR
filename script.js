@@ -1,17 +1,16 @@
 
-// Wait until the page loads
 document.addEventListener("DOMContentLoaded", function () {
   const button = document.querySelector("button");
   const resultDiv = document.getElementById("results");
 
   button.addEventListener("click", function () {
-    // Get user input
+
     const day = parseInt(document.getElementById("day").value);
     const month = parseInt(document.getElementById("month").value);
     const year = parseInt(document.getElementById("year").value);
     const gender = document.querySelector('input[name="gender"]:checked');
 
-    // Validation
+    
     if (isNaN(day) || day < 1 || day > 31) {
       alert("Please enter a valid day (1–31)");
       return;
@@ -32,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    // Calculate day of the week
+    
     const CC = Math.floor(year / 100);
     const YY = year % 100;
 
@@ -43,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
         day) %
       7;
 
-    // Akan names arrays
+    
     const days = [
       "Sunday",
       "Monday",
@@ -74,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "Ama"
     ];
 
-    // Choose Akan name
+    
     let akanName;
     if (gender.value === "male") {
       akanName = maleNames[dayOfWeek];
@@ -82,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
       akanName = femaleNames[dayOfWeek];
     }
 
-    // Display result
+    
     resultDiv.innerHTML = `
       <p>You were born on a <strong>${days[dayOfWeek]}</strong>.</p>
       <p>Your Akan name is <strong>${akanName}</strong>.</p>
