@@ -35,10 +35,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const CC = Math.floor(year / 100);
     const YY = year % 100;
 
-    const dayOfWeek =
+    const dayOfWeek =Math.floor
       ((4 * CC - 2 * CC - 1) +
         (45 * YY) +
-        Math.floor((10 * (month + 1)) / 3) +
+        ((10 * (month + 1)) / 3) +
         day) %
       7;
 
