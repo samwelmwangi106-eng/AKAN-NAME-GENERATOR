@@ -28,7 +28,7 @@ p {
     color: #564949;
 }
 
-form {
+# form {
     display: flex;
     flex-direction:column;
 }
@@ -64,8 +64,6 @@ button:hover {
 }
 
 #result {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 16px;
-    font-weight: bold;
-}
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;}
